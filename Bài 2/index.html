@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final test Bài 2</title>
+</head>
+<body>
+    <h1>Tạo hình tam giác bằng các ký tự *</h1>
+    <p>Nhập số n:</p>
+    <input type="number" id="n" name="n" min="1" max="10" value="5">
+    <button onclick="numberOneTriangle()">Vẽ tam giác</button>
+    <div id="triangle"></div>
+    <script>
+      function numberOneTriangle() {
+        let n = document.getElementById("n").value;
+        let triangle = "";
+        for (let i = 0; i < n; i++) {
+          for (let j = 0; j <= i; j++) {
+            triangle += "*";
+          }
+          triangle += "<br>";
+        }
+        document.getElementById("triangle").innerHTML = triangle;
+      }
+    </script>
+</body>
+</html>
